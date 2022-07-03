@@ -13,12 +13,12 @@ import Icon from "./Icon.js";
 
 import { useRouter } from "next/router";
 
-import useStyles from "./styles";
+// import useStyles from "./styles";
 import Input from "./Input";
 
 const Auth = () => {
   const router = useRouter();
-  const classes = useStyles();
+  // const classes = useStyles();
   const [isSignUp, setisSignUp] = useState(false);
   const [Showpassword, setShowpassword] = useState(false);
   let username;
