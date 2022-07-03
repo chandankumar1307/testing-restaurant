@@ -13,12 +13,12 @@ import Icon from "./Icon.js";
 
 import { useRouter } from "next/router";
 
-import useStyles from "./styles";
+// import useStyles from "./styles";
 import Input from "./Input";
 
 const Auth = () => {
   const router = useRouter();
-  const classes = useStyles();
+  // const classes = useStyles();
   const [isSignUp, setisSignUp] = useState(false);
   const [Showpassword, setShowpassword] = useState(false);
   let username;
@@ -60,12 +60,12 @@ const Auth = () => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <Paper className={classes.paper} elevation={3}>
-        <Avatar className={classes.avatar}>
+      <Paper elevation={3}>
+        <Avatar>
           <LockOutlined />
         </Avatar>
         <Typography variant="h5">{isSignUp ? "Sign Up" : "Sign In"}</Typography>
-        <form className={classes.form} onSubmit={SubmitHandler}>
+        <form onSubmit={SubmitHandler}>
           <Grid container spacing={2}>
             {isSignUp && (
               <>
@@ -114,7 +114,7 @@ const Auth = () => {
             type="submit"
             fullWidth
             color="primary"
-            className={classes.submit}
+            // className={classes.submit}
           >
             Sign In disabled please use Google Sign in
           </Button>
@@ -126,7 +126,7 @@ const Auth = () => {
                 variant="contained"
                 color="primary"
                 onClick={renderProps.onClick}
-                className={classes.googleButton}
+                // className={classes.googleButton}
                 fullWidth
                 disabled={renderProps.disabled}
                 startIcon={<Icon />}
